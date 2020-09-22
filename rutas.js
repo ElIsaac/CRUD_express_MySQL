@@ -8,7 +8,7 @@ router.get("/", (req, res)=>{
     res.json({mensaje: "ok"})
 })
 
-router.post("/1", (req, res)=>{
+router.post("/nuevo", (req, res)=>{
     coneccionMySql.query('INSERT INTO `hola`(`ID`, `titulo`) VALUES (0,"'+req.body.titulo+'")',  (error) => {
         if (error){console.log(error)}
         res.json({"mensaje":"ok"})
