@@ -11,6 +11,6 @@ app.set("port", 4000)
 
 app.use(require("./rutas"))
 
-app.listen(app.get("port"), ()=>{
-    console.log("server on port "+app.get("port"))
+app.listen(process.env.PORT || app.get("port"), ()=>{
+    console.log("server on port ",app.get("port"))
 })
